@@ -9,7 +9,7 @@ from scipy.stats import entropy as scipy_entropy
 
 
 # Path for dataset which contains real and AI infographic images
-IMG_ROOT = '/Users/nolimithaben/Documents/Infographic_IMGS'
+IMG_ROOT = ''
 
 # Folder where extracted features and labels are saved
 SAVE_DIR = 'features_infographics'

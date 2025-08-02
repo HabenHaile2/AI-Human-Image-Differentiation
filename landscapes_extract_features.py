@@ -11,7 +11,7 @@ import pywt
 from sklearn.cluster import KMeans
 
 # This sets up the folder paths
-IMG_ROOT = '/Users/nolimithaben/Documents/IMGS'
+IMG_ROOT = ''
 SAVE_DIR = 'features'
 os.makedirs(SAVE_DIR, exist_ok=True)
 
