@@ -15,3 +15,16 @@ from sklearn.metrics import (
 LANDSCAPE_FEAT_DIR = 'features'
 INFOGRAPHIC_FEAT_DIR = 'features_infographics'
 SUMMARY_PATH = 'cluster_summary_landscape_vs_infographic.csv'
+
+# Features to test combinations on
+SELECTED_FEATURES = [
+    'gradient_stats',
+    'layout_alignment',
+    'color_region_count',
+    'lbp',
+    'entropy',
+    'edge_density',
+    'hue_saturation_stats',
+    'color_palette_diversity',
+    'blur'
+]
