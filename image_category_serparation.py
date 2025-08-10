@@ -11,3 +11,7 @@ from sklearn.metrics import (
     adjusted_rand_score
 )
 
+# Directories with features
+LANDSCAPE_FEAT_DIR = 'features'
+INFOGRAPHIC_FEAT_DIR = 'features_infographics'
+SUMMARY_PATH = 'cluster_summary_landscape_vs_infographic.csv'
