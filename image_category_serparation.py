@@ -93,3 +93,40 @@ def evaluate_features(feature_combo):
         'correct_infographic': correct_infographic,
         'incorrect_infographic': incorrect_infographic,
     }
+
+def main():
+    results = []
+
+    print("Starting cluster evaluation for separating Landscape vs Infographic\n")
+
+    for r in range(1, len(SELECTED_FEATURES) + 1):
+        for feature_combo in itertools.combinations(SELECTED_FEATURES, r):
+            print(f"Testing feature combo: {feature_combo}")
+            result = evaluate_features(feature_combo)
+            results.append(result)
+
+    results.sort(key=lambda x: x['balanced_accuracy'], reverse=True)
+
+    header = [
+        'features',
+        'accuracy',
+        'f1_score',
+        'adjusted_rand_index',
+        'balanced_accuracy',
+        'correct_landscape',
+        'incorrect_landscape',
+        'correct_infographic',
+        'incorrect_infographic',
+    ]
+
+    with open(SUMMARY_PATH, mode='w', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=header)
+        writer.writeheader()
+        writer.writerows(results)
+
+    print("\nEvaluation complete.")
+    print(f"Results saved to: {SUMMARY_PATH}")
+    print(f"Top performing combo: {results[0]['features']} (Balanced Accuracy = {results[0]['balanced_accuracy']:.4f})")
+
+if __name__ == "__main__":
+    main()
