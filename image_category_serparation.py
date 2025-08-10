@@ -28,3 +28,19 @@ SELECTED_FEATURES = [
     'color_palette_diversity',
     'blur'
 ]
+
+def load_feature_stack(dir_path, feature_names):
+    feature_arrays = []
+    for name in feature_names:
+        file_path = os.path.join(dir_path, f"{name}.npy")
+        arr = np.load(file_path)
+        feature_arrays.append(arr)
+    return np.concatenate(feature_arrays, axis=1)
+
+def load_labels(label_path, label_prefix):
+    labels = np.load(label_path)
+    # Here, only label by dataset type: Landscape or Infographic
+    # Label 1 or 0 is ignored here, all Landscape labels get "Landscape", all infographic get "Infographic"
+    # Because we only want to separate Landscape vs Infographic
+    return [label_prefix for _ in labels]
+
