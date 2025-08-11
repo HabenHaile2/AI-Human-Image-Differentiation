@@ -1,3 +1,10 @@
+#Haben Haile, Chloe Ho, William Andreopoulos
+#SJSU Research Internship Project
+#Differentiation of Human and AI-Generated Images Across Several Image Categories
+#August 15, 2025
+
+#Dataset created by Haben Haile: https://drive.google.com/drive/folders/1Eeitymcr_84lKR9eYi2WYLEU92pF22eg?usp=sharing
+
 import os
 import cv2
 import numpy as np

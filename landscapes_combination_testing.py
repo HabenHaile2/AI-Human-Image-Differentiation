@@ -1,3 +1,8 @@
+#Haben Haile, Chloe Ho, William Andreopoulos
+#SJSU Research Internship Project
+#Differentiation of Human and AI-Generated Images Across Several Image Categories
+#August 15, 2025
+
 import os
 import numpy as np
 import itertools
