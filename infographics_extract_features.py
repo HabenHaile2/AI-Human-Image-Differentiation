@@ -3,7 +3,7 @@
 #Differentiation of Human and AI-Generated Images Across Several Image Categories
 #August 15, 2025
 
-#Dataset created by Chloe Ho: https://drive.google.com/file/d/10H8sRa8jhii21uqQ3wmNSM6dEy4F-JEW/view?usp=sharing
+#Dataset created by Chloe Ho: https://drive.google.com/drive/folders/1LH1edqoOH6Q3_k2Z7NiMFElnVP2lLViP?usp=share_link
 
 import os
 import cv2
